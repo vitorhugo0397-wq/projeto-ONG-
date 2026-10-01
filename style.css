@@ -1,0 +1,41 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;line-height:1.6;color:#222;background:#f7f7f7}header{background:#fff;padding:18px 8%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.08)}header img{width:100px;height:34px;object-fit:contain}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#174a7e;font-weight:bold;text-decoration:none}nav a:hover,nav a:focus{text-decoration:underline}main{max-width:1050px;margin:auto;padding:35px 20px}section{background:#fff;margin-bottom:28px;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06)}h1,h2,h3,h4{color:#174a7e}.content-img{width:100%;max-width:700px;display:block;margin:20px auto;border-radius:10px}article{border-top:1px solid #ddd;padding-top:22px;margin-top:25px}article:first-of-type{border-top:0;padding-top:0}.badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#e6f0fa;color:#174a7e;font-size:.85rem;font-weight:bold;margin-bottom:8px}.alert{padding:14px 16px;border-left:5px solid #174a7e;background:#eef5fb;border-radius:6px;margin:16px 0}.alert.success{border-left-color:#247a45;background:#edf8f0}.alert.error{border-left-color:#a52b2b;background:#fff0f0}form{max-width:760px}fieldset{margin-bottom:22px;padding:20px;border:1px solid #bbb;border-radius:8px}legend{font-weight:bold;color:#174a7e;padding:0 8px}label{display:block;margin-top:12px;font-weight:bold}input,select{width:100%;padding:11px;margin-top:5px;border:1px solid #999;border-radius:6px;font-size:1rem}input:focus,select:focus{outline:3px solid rgba(23,74,126,.18);border-color:#174a7e}input:valid{border-color:#2b7a45}input:invalid:not(:placeholder-shown){border-color:#b12b2b}button,.button{display:inline-block;padding:12px 22px;border:0;border-radius:6px;background:#174a7e;color:#fff;font-weight:bold;cursor:pointer;text-decoration:none;transition:background-color .2s ease,transform .2s ease,opacity .2s ease}button:hover,.button:hover{background:#103858;transform:translateY(-1px)}button:active,.button:active{transform:translateY(0)}button:disabled{opacity:.5;cursor:not-allowed}.demo-actions{display:flex;gap:12px;flex-wrap:wrap}.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);align-items:center;justify-content:center;padding:20px;z-index:100}.modal-backdrop.open{display:flex}.modal{background:#fff;max-width:520px;width:100%;padding:28px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.25)}.toast{position:fixed;right:20px;bottom:20px;background:#174a7e;color:#fff;padding:14px 18px;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.2);opacity:0;transform:translateY(15px);pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:110}.toast.show{opacity:1;transform:translateY(0)}footer{background:#174a7e;color:#fff;text-align:center;padding:22px}@media(max-width:650px){header{flex-direction:column}nav{justify-content:center}section{padding:20px}.demo-actions{flex-direction:column}.demo-actions button{width:100%}}
+
+/* Tema de alto contraste: inclui superfícies, formulário e feedback. */
+body.alto-contraste,
+.alto-contraste header,
+.alto-contraste section,
+.alto-contraste footer,
+.alto-contraste .modal,
+.alto-contraste .toast,
+.alto-contraste .badge,
+.alto-contraste .alert,
+.alto-contraste input,
+.alto-contraste select {
+  background: #000;
+  color: #fff;
+  box-shadow: none;
+}
+.alto-contraste h1, .alto-contraste h2, .alto-contraste h3,
+.alto-contraste h4, .alto-contraste legend { color: #fff; }
+.alto-contraste a { color: #ffff00; text-decoration: underline; }
+.alto-contraste article, .alto-contraste fieldset,
+.alto-contraste input, .alto-contraste select,
+.alto-contraste .alert, .alto-contraste .badge,
+.alto-contraste .modal, .alto-contraste .toast { border-color: #fff; }
+.alto-contraste .modal, .alto-contraste .toast,
+.alto-contraste .badge { border: 2px solid #fff; }
+.alto-contraste input::placeholder { color: #fff; opacity: 1; }
+.alto-contraste button, .alto-contraste .button {
+  background: #fff; color: #000; border: 2px solid #fff;
+}
+.alto-contraste button:hover, .alto-contraste .button:hover {
+  background: #ffff00; border-color: #ffff00; color: #000;
+}
+.alto-contraste button:disabled { opacity: 1; background: #000; color: #fff; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible { outline: 3px solid #174a7e; outline-offset: 3px; }
+.alto-contraste :focus-visible { outline: 3px solid #ffff00; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  button, .button, .toast { transition: none; }
+}
